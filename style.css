@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #0d021a;
+  background-image: radial-gradient(circle at center, #2a0845 0%, #0d021a 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+/* Container Principal */
+.panel-container {
+  background: rgba(25, 10, 40, 0.75);
+  border: 2px solid #b026ff;
+  border-radius: 16px;
+  padding: 30px;
+  width: 350px;
+  box-shadow: 0 0 20px #b026ff, inset 0 0 15px rgba(176, 38, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.panel-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #fff;
+  text-shadow: 0 0 8px #d800ff, 0 0 20px #b026ff;
+  letter-spacing: 2px;
+}
+
+.options-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Card de Opção */
+.option-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(176, 38, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.option-card:hover {
+  border-color: #d800ff;
+  box-shadow: 0 0 10px rgba(216, 0, 255, 0.4);
+}
+
+.option-label {
+  font-weight: 600;
+  font-size: 1rem;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Checkbox Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #33154d;
+  transition: .4s;
+  border-radius: 24px;
+  border: 1px solid #b026ff;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
+  background-color: #ffffff;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #b026ff;
+  box-shadow: 0 0 10px #b026ff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(22px);
+}
+
+/* Slider FOV */
+.range-input {
+  width: 100px;
+  accent-color: #d800ff;
+  cursor: pointer;
+}
+
+.value-display {
+  font-size: 0.9rem;
+  color: #d800ff;
+  font-weight: bold;
+  width: 35px;
+  text-align: right;
+}
